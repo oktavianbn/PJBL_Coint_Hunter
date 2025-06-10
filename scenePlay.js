@@ -7,7 +7,7 @@ var scenePlay = new Phaser.Class({
   init: function () {},
 
   preload: function () {
-    this.load.setBaseURL("assets/");
+    this.load.setBaseURL("Assets/");
     this.load.image("background", "images/BG.png");
     this.load.image("btn_play", "images/ButtonPlay.png");
     this.load.image("gameover", "images/GameOver.png");
