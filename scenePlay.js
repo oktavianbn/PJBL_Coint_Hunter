@@ -243,7 +243,7 @@ var scenePlay = new Phaser.Class({
     };
     this.physics.add.overlap(this.player, coins, collectCoin, null, this);
 
-    var currentLevel = 3;
+    var currentLevel = 1;
     this.gameStarted = false;
 
     var prepareWorld = function () {
@@ -259,85 +259,42 @@ var scenePlay = new Phaser.Class({
       }
 
       if (currentLevel == 1) {
-        platforms.create(150 - relativeSize.w, 250, "ground");
-        platforms.create(780 + relativeSize.w, 250, "ground");
-        platforms.create(
-          250 + groundTemp.width / 2 + relativeSize.w,
-          350,
-          "ground"
-        );
-        platforms.create(
-          650 + groundTemp.width / 2 - relativeSize.w,
-          480,
-          "ground"
-        );
-        platforms.create(
-          845 + groundTemp.width / 2 - relativeSize.w,
-          480,
-          "ground"
-        );
-        platforms.create(
-          550 + groundTemp.width / 2 + relativeSize.w,
-          584,
-          "ground"
-        );
+        platforms.create(250, 620, "ground");
+        platforms.create(480, 460, "ground");
+        platforms.create(700, 500, "ground");
+        platforms.create(900, 440, "ground");
+        platforms.create(620, 360, "ground");
+        platforms.create(820, 300, "ground");
       } else if (currentLevel == 2) {
-        platforms.create(480 - relativeSize.w, 250, "ground");
-        platforms.create(1075 - relativeSize.w, 380, "ground");
-        platforms.create(500 - relativeSize.w, 600, "ground");
-        platforms.create(975 - relativeSize.w, 500, "ground");
-        platforms.create(200 - relativeSize.w, 350, "ground");
-        platforms.create(335 - relativeSize.w, 500, "ground");
-        platforms.create(25 - relativeSize.w, 600, "ground");
-        platforms.create(440 - relativeSize.w, 600, "ground");
-        platforms.create(230 - relativeSize.w, 670, "ground");
+        platforms.create(180, 550, "ground");
+        platforms.create(360, 480, "ground");
+        platforms.create(50, 430, "ground");
+        platforms.create(720, 470, "ground");
+        platforms.create(900, 390, "ground");
+        platforms.create(1080, 340, "ground");
+        platforms.create(360, 360, "ground");
+        platforms.create(540, 300, "ground");
+        platforms.create(720, 240, "ground");
       } else if (currentLevel == 3) {
-        platforms.create(150 - relativeSize.w, 250, "ground");
-        platforms.create(
-          550 + groundTemp.width / 2 + relativeSize.w,
-          584,
-          "ground"
-        );
-        platforms.create(350 - relativeSize.w, 350, "ground");
-        platforms.create(950 - relativeSize.w, 422, "ground");
-        platforms.create(
-          720 + groundTemp.width / 2 + relativeSize.w,
-          280,
-          "ground"
-        );
+        platforms.create(200, 620, "ground");
+        platforms.create(430, 470, "ground");
+        platforms.create(660, 500, "ground");
+        platforms.create(890, 420, "ground");
+        platforms.create(730, 320, "ground");
       } else if (currentLevel == 4) {
-        platforms.create(150 - relativeSize.w, 250, "ground");
-        platforms.create(780 + relativeSize.w, 250, "ground");
-        platforms.create(
-          250 + groundTemp.width / 2 + relativeSize.w,
-          350,
-          "ground"
-        );
-        platforms.create(
-          650 + groundTemp.width / 2 - relativeSize.w,
-          480,
-          "ground"
-        );
-        platforms.create(
-          845 + groundTemp.width / 2 - relativeSize.w,
-          480,
-          "ground"
-        );
-        platforms.create(
-          550 + groundTemp.width / 2 + relativeSize.w,
-          584,
-          "ground"
-        );
+        platforms.create(240, 600, "ground");
+        platforms.create(460, 550, "ground");
+        platforms.create(680, 450, "ground");
+        platforms.create(900, 470, "ground");
+        platforms.create(740, 340, "ground");
+        platforms.create(960, 290, "ground");
       } else if (currentLevel == 5) {
-        platforms.create(480 - relativeSize.w, 250, "ground");
-        platforms.create(1075 - relativeSize.w, 380, "ground");
-        platforms.create(500 - relativeSize.w, 600, "ground");
-        platforms.create(975 - relativeSize.w, 500, "ground");
-        platforms.create(200 - relativeSize.w, 350, "ground");
-        platforms.create(335 - relativeSize.w, 500, "ground");
-        platforms.create(25 - relativeSize.w, 600, "ground");
-        platforms.create(440 - relativeSize.w, 600, "ground");
-        platforms.create(230 - relativeSize.w, 670, "ground");
+        platforms.create(180, 640, "ground");
+        platforms.create(580, 640, "ground");
+        platforms.create(890, 640, "ground");
+        platforms.create(450, 500, "ground");
+        platforms.create(90, 440, "ground");
+        platforms.create(50, 800, "ground");
       }
 
       coins.children.iterate(function (child) {
@@ -354,7 +311,7 @@ var scenePlay = new Phaser.Class({
         );
         enemy.setBounce(1);
         enemy.setCollideWorldBounds(true);
-        enemy.setVelocity(Phaser.Math.Between(-200, 200), 20);
+        enemy.setVelocity(Phaser.Math.Between(-10000, 5000), 80);
         enemy.allowGravity = false;
       }
     };
